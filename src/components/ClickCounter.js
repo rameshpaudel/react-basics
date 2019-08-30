@@ -19,7 +19,7 @@ class ClickCounter extends Component{
         alert("On the process of removing")
     }
 
-    
+
     onClickHandler =() =>{
         this.setState({
             counter: this.state.counter + 1
