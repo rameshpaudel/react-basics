@@ -4,7 +4,7 @@ import Heading from './components/Heading'
 import CardList from './components/CardList'
 import Counter from './components/ClickCounter'
 
-
+import TestData,{logMessages} from './helpers/'
 import './App.css';
 import ClickCounter from './components/ClickCounter';
 
@@ -37,7 +37,7 @@ class App extends React.Component {
 
   clickCounterHandler = () => {
     this.setState({
-      showClickCounter: !this.state.showClickCounter 
+      showClickCounter: !this.state.showClickCounter
     })
   }
 
@@ -45,6 +45,12 @@ class App extends React.Component {
     this.setState({
       showCardList: !this.state.showCardList
     })
+  }
+
+  componentDidMount(){
+    console.log(TestData)
+    // warnMessage("The component is mounted")
+    logMessages("Log The component is mounted")
   }
   render() {
     return (
