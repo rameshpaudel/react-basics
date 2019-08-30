@@ -3,7 +3,7 @@ import Card from './Card'
 
 function CardList (props){
 
-    if(props.items.length){
+    if(props.items && props.items.length){
         return (
             <div className="cardList">
                 {props.items.map((value,index)=>{
@@ -21,7 +21,7 @@ function CardList (props){
     }
     return (
         <div>
-            <h1>No data in the card </h1>
+            <h1 style={{color: "red"}}>No data in the card </h1>
         </div>
     )
 }
