@@ -7,8 +7,9 @@ import Counter from './components/ClickCounter'
 import TestData,{logMessages} from './helpers/'
 import './App.css';
 import ClickCounter from './components/ClickCounter';
-
-
+import AccordianList from './components/AccordianList';
+ 
+var faqData = require('./data/faq.json')
 var cards = [
   {
     title: "Test this out",
@@ -56,7 +57,7 @@ class App extends React.Component {
     return (
       <div className="App">
 
-
+      
         <Heading title="Hello" test="10" />
         <button onClick={this.clickCounterHandler}>Click Counter</button>
         <button onClick={this.cardListHandler}>CardList</button>
@@ -65,6 +66,9 @@ class App extends React.Component {
           {this.state.showClickCounter && <ClickCounter heading="Click counter is" />}
         </div>
         {this.state.showCardList && <CardList items={cards} />}
+
+
+        <AccordianList items={faqData}/> 
       </div>
     );
   }

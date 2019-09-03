@@ -2,7 +2,7 @@ import React from 'react'
 
 function Card(props) {
     return (<div className="cardItem">
-        <img src={props.image}/>
+        {props.image ? (<img src={props.image}/>) : <p>No image found</p>}
         <div className="card-body">
             <h5 className="card-title">{props.title}</h5>
             <p className="card-text">{props.description}</p>

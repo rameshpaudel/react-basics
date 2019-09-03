@@ -12,3 +12,33 @@
   margin: 0 auto;
   width: 50vw;
 }
+
+.accordian-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ededed;
+  transition: all 0.3s linear;
+}
+
+.accordian-row h3{
+  padding-right: 20px;
+  
+}
+.accordian-content{
+  background: #ededed;
+  transition: all 0.3s linear;
+}
+
+.active{
+  background-color: red;
+  height: auto;
+  opacity: 1;
+}
+
+.inactive{
+  background-color: green;
+  height: 0px;
+  opacity: 0;
+}
