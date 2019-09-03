@@ -31,7 +31,7 @@ class ClickCounter extends Component{
             <div className="center">
                 <h5>{this.state.title}</h5>
                 {this.props.heading && <h1>{this.props.heading}</h1>}
-                <h3>{this.state.counter}</h3>  
+                {this.state.counter > 3 && (<h3>{this.state.counter}</h3>)  }
                 <button onClick={this.onClickHandler}>Click Here</button>
 
             </div>
