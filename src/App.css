@@ -28,6 +28,7 @@
 }
 .accordian-content{
   background: #ededed;
+  height: fit-content;
   transition: all 0.3s linear;
 }
 
