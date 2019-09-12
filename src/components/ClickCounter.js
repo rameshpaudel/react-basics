@@ -1,43 +1,20 @@
-import React,{ Component} from 'react'
+import React, { Component } from 'react'
 
-class ClickCounter extends Component{
-    constructor(props){
-        super(props);
-        this.state ={
-            counter : 0,
-            title: ''
-        }
+function ClickCounter({title,heading,counter,onClickHandler}) {
+
+    var generateHeading = null;
+    if(heading){
+        generateHeading = <h1>{heading}</h1>
     }
+    return (
+        <div className="center">
+            <h5>{title}</h5>
+            {generateHeading}
+            {counter > 3 && (<h3>{counter}</h3>)}
+            <button onClick={onClickHandler}>Click Here</button>
 
-    componentDidMount(){
-        this.setState({
-            title: "This is a click counter"
-        })
-    }
-
-    componentWillUnmount(){
-        alert("On the process of removing")
-    }
-
-
-    onClickHandler =() =>{
-        this.setState({
-            counter: this.state.counter + 1
-        })
-    }
-
-    render(){
-        return(
-            <div className="center">
-                <h5>{this.state.title}</h5>
-                {this.props.heading && <h1>{this.props.heading}</h1>}
-                {this.state.counter > 3 && (<h3>{this.state.counter}</h3>)  }
-                <button onClick={this.onClickHandler}>Click Here</button>
-
-            </div>
-        )
-    }
-
+        </div>
+    )
 }
 
 export default ClickCounter;

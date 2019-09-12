@@ -9,7 +9,7 @@ export default class AccordianList extends Component {
         return (
             <div>
                 {this.props.items.map((value,index)=>{
-                    return <Accordian title={value.title} description={value.description} />
+                    return <Accordian key={index} title={value.title} description={value.description} />
                 })}
             </div>
         )
